@@ -3,7 +3,7 @@
 > La corrección del tp se debe hacer en un branch del repo llamado tp-results
 
 - clonar el repo dentro de la carpeta del TP a evaluar.
-- `rm -rf .git` dentro de la carpeta tp-score para evitar posibles conflictos (también borrar el readme)
+- `rm -rf .git` dentro de la carpeta tp-results para evitar posibles conflictos (también borrar el readme)
 - inlcluir el `CSS` y el `JS` en el head del index de la siguiente manera:
 ```
 <link rel="stylesheet" href="tp-results/result.css">
