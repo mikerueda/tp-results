@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.tp-result-container {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  box-shadow:0 4px 300px rgba(0,0,0,0.5);
+  border-radius:3px;
+  width:200px;
+  height:200px
+}
+
+.tp-result-container h3{
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  font-size:16px;
+}
+.tp-result-container h3 strong{
+  display: block
+}
+
+.tp-result-container ul{}
+.tp-result-container ul li{}
+.tp-result-container ul li .icon{}
