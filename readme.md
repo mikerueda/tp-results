@@ -3,10 +3,11 @@
 > La corrección del tp se debe hacer en un branch del repo llamado tp-results
 
 - clonar el repo dentro de la carpeta del TP a evaluar.
+- `rm -rf .git` dentro de la carpeta tp-score para evitar posibles conflictos (también borrar el readme)
 - inlcluir el `CSS` y el `JS` en el head del index de la siguiente manera:
 ```
 <link rel="stylesheet" href="tp-results/result.css">
-<script src="result.js" type="tp-results/text/javascript"></script>
+<script src="tp-results/result.js" type="text/javascript"></script>
 ```
 - Modificar la propiedad `score` de cada objeto en el arreglo `observations` dentro de `results.js` según corresponda
 ```
