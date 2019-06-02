@@ -1,14 +1,18 @@
-let observations = [
-  {label:'Identación', score:9},
-  {label:'Maquetado', score:7},
-  {label:'Css', score:5},
-  {label:'Responsive', score:7},
-  {label:'Interacciones', score:4},
-  {label:'Consigna', score:6},
-  {label:'Apreciativa', score:5}
-]
+
+var data = []
+const getData = () =>{
+  fetch('https://raw.githubusercontent.com/Marcreativo/tp-results/master/db.json')
+    .then(res => res.json())
+    .then(res => {
+      data = res.results;
+      console.log(data);
+    })
+}
+
+/*
 let finalScore = 0;
 observations.forEach( e => {finalScore += e.score})
+*/
 
 const styledScore = e => {
   let span = document.createElement('span')
@@ -44,5 +48,6 @@ const createElements = () => {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   let body = document.getElementsByTagName("BODY")[0] 
-  body.appendChild(createElements())
+  //body.appendChild(createElements())
+  getData()
 });
