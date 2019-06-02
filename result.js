@@ -1,13 +1,25 @@
-var data, inputBox, container
+var body, data, inputBox, container
 async function getData(dni){
   let request = await fetch('https://raw.githubusercontent.com/Marcreativo/tp-results/master/db.json')
   response = await request.json()
-  let result = response.results.filter(e => e.students.includes(dni))[0]
-  if (result){
-    console.log(result)
+  let data = response.results.filter(e => e.students.includes(dni))[0]
+  if (data){
+    getScore(data.notes)
+    createResult()
   }else{
     alert('no hay resultados que mostrar para este número de documento')
+    inputBox.classList.remove('loading')
   }
+}
+
+const getScore = (data) => {
+  let weights = 0;
+  let prom = 0;
+  data.forEach(e => {
+    weights += e.weight 
+    prom += (e.score * e.weight) 
+  })
+  console.log(prom, weights)
 }
 
 const createElements = () => {
@@ -15,8 +27,12 @@ const createElements = () => {
   input.id = 'searchBox'
   input.onkeypress = findResults
 
+  let p = document.createElement('p')
+  p.innerText = 'Ingresá tu documento'
+
   inputBox = document.createElement('div')
   inputBox.className = 'search'
+  inputBox.appendChild(p)
   inputBox.appendChild(input)
 
   container = document.createElement('div')
@@ -29,6 +45,7 @@ const createElements = () => {
 const findResults = () => {
   if( event.keyCode === 13){
     let dni = parseInt(event.target.value)
+    inputBox.classList.add('loading')
     getData(dni)
   }
 }
@@ -42,7 +59,7 @@ const styledScore = e => {
 
 const createResult = () =>{
   let strong = document.createElement('strong')
-  strong.textContent = Math.round((finalScore / observations.length)*10) / 10
+  //strong.textContent = getScore()
 
   let title = document.createElement('h3')
   title.textContent = 'Aprobado'
@@ -61,6 +78,6 @@ const createResult = () =>{
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  let body = document.getElementsByTagName("BODY")[0] 
+  body = document.getElementsByTagName("BODY")[0] 
   body.appendChild(createElements())
 });
