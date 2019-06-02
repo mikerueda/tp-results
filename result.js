@@ -1,19 +1,38 @@
-
-var data = []
-const getData = () =>{
-  fetch('https://raw.githubusercontent.com/Marcreativo/tp-results/master/db.json')
-    .then(res => res.json())
-    .then(res => {
-      data = res.results;
-      console.log(data);
-    })
+var data, inputBox, container
+async function getData(dni){
+  let request = await fetch('https://raw.githubusercontent.com/Marcreativo/tp-results/master/db.json')
+  response = await request.json()
+  let result = response.results.filter(e => e.students.includes(dni))[0]
+  if (result){
+    console.log(result)
+  }else{
+    alert('no hay resultados que mostrar para este número de documento')
+  }
 }
 
-/*
-let finalScore = 0;
-observations.forEach( e => {finalScore += e.score})
-*/
+const createElements = () => {
+  let input = document.createElement('input')
+  input.id = 'searchBox'
+  input.onkeypress = findResults
 
+  inputBox = document.createElement('div')
+  inputBox.className = 'search'
+  inputBox.appendChild(input)
+
+  container = document.createElement('div')
+  container.className = 'tp-result-container'
+  container.appendChild(inputBox)
+  
+  return container
+}
+
+const findResults = () => {
+  if( event.keyCode === 13){
+    let dni = parseInt(event.target.value)
+    getData(dni)
+  }
+}
+      
 const styledScore = e => {
   let span = document.createElement('span')
   span.textContent = e
@@ -21,10 +40,7 @@ const styledScore = e => {
   return span
 }
 
-const createElements = () => {
-  let container = document.createElement('div')
-  container.className = 'tp-result-container'
-
+const createResult = () =>{
   let strong = document.createElement('strong')
   strong.textContent = Math.round((finalScore / observations.length)*10) / 10
 
@@ -42,12 +58,9 @@ const createElements = () => {
     item.appendChild(styledScore(e.score))
     observationsList.appendChild(item)
   })
-
-  return container
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
   let body = document.getElementsByTagName("BODY")[0] 
-  //body.appendChild(createElements())
-  getData()
+  body.appendChild(createElements())
 });
