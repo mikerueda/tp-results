@@ -1,7 +1,19 @@
 {
   "reults": [
     {
-      "studends": [95117161],
+      "students": [95117161],
+      "notes": [
+        {"label":"Maquetado", "score":9, "weight":10},
+        {"label":"Sass", "score":7, "weight":10},
+        {"label":"Asignación de funciones", "score":7, "weight":10},
+        {"label":"Manejo de datos", "score":7, "weight":10},
+        {"label":"Structuras JavaScript", "score":7, "weight":10},
+        {"label":"Consigna", "score":7, "weight":10},
+        {"label":"Apreciativa", "score":7, "weight":10}
+      ]
+    },
+    {
+      "students": [11111111],
       "notes": [
         {"label":"Maquetado", "score":9, "weight":10},
         {"label":"Sass", "score":7, "weight":10},
