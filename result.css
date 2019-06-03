@@ -7,7 +7,9 @@
   box-shadow: 0 4px 300px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   width: 280px;
-  min-height: 280px;
+  transition: height 0.5s;
+  height: 280px;
+  overflow: hidden;
 }
 .tp-result-container .search {
   position: relative;
@@ -16,11 +18,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: filter 1s;
+  transition: filter 0.5s, height 0.5s;
+  overflow: hidden;
 }
 .tp-result-container .search.loading {
-  filter: blur(4px);
+  filter: blur(8px);
   pointer-events: none;
+}
+.tp-result-container .search.hidden {
+  height: 0px;
 }
 .tp-result-container .search p {
   font-family: "Roboto", sans-serif;
@@ -57,8 +63,9 @@
 }
 .tp-result-container ul {
   list-style: none;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   padding: 0;
+  clear: both;
 }
 .tp-result-container ul li {
   color: #444;

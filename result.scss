@@ -8,7 +8,9 @@
   box-shadow:0 4px 300px rgba(0,0,0,0.3);
   border-radius:4px;
   width:280px;
-  min-height: 280px;
+  transition: height 0.5s;
+  height: 280px;
+  overflow: hidden;
   .search{
     position: relative;
     height: 280px;
@@ -16,10 +18,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: filter 0.5s;
+    transition: filter 0.5s, height 0.5s;
+    overflow: hidden;
     &.loading{
       filter: blur(8px);
       pointer-events: none;
+    }
+    &.hidden{
+      height: 0px;
     }
     p{
       font-family: 'Roboto', sans-serif;   
@@ -57,8 +63,9 @@
   }
   ul{
     list-style: none;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     padding: 0;
+    clear: both;
     li{
       color: #444;
       font-family: 'Roboto', sans-serif;

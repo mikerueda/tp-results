@@ -1,25 +1,29 @@
-var body, data, inputBox, container
+var body, data, inputBox, container, scoreWrapper
 async function getData(dni){
   let request = await fetch('https://raw.githubusercontent.com/Marcreativo/tp-results/master/db.json')
   response = await request.json()
   let data = response.results.filter(e => e.students.includes(dni))[0]
   if (data){
-    getScore(data.notes)
-    createResult()
+    localStorage.setItem('data', JSON.stringify(data))
+    document.activeElement.blur();
+    createResult(data.notes)
+    setTimeout(() => showResults(), 500)
   }else{
     alert('no hay resultados que mostrar para este número de documento')
     inputBox.classList.remove('loading')
   }
 }
 
+const showResults = () => {
+  container.style.height = `${scoreWrapper.clientHeight}px`
+  inputBox ? inputBox.classList.add('hidden') : null
+}
+
 const getScore = (data) => {
   let weights = 0;
   let prom = 0;
-  data.forEach(e => {
-    weights += e.weight 
-    prom += (e.score * e.weight) 
-  })
-  console.log(prom, weights)
+  data.forEach(e => { weights += e.weight; prom += (e.score * e.weight) })
+  return Math.round((prom / weights)*10) / 10
 }
 
 const createElements = () => {
@@ -34,12 +38,7 @@ const createElements = () => {
   inputBox.className = 'search'
   inputBox.appendChild(p)
   inputBox.appendChild(input)
-
-  container = document.createElement('div')
-  container.className = 'tp-result-container'
   container.appendChild(inputBox)
-  
-  return container
 }
 
 const findResults = () => {
@@ -57,19 +56,23 @@ const styledScore = e => {
   return span
 }
 
-const createResult = () =>{
+const createResult = (data) =>{
+  scoreWrapper = document.createElement('div')
+  scoreWrapper.className = 'scoreWrapper'
+  container.appendChild(scoreWrapper)
+
   let strong = document.createElement('strong')
-  //strong.textContent = getScore()
+  strong.textContent = getScore(data)
 
   let title = document.createElement('h3')
   title.textContent = 'Aprobado'
   title.appendChild(strong)
-  container.appendChild(title)
+  scoreWrapper.appendChild(title)
   
   let observationsList = document.createElement('ul')
-  container.appendChild(observationsList)
+  scoreWrapper.appendChild(observationsList)
 
-  observations.forEach(e => {
+  data.forEach(e => {
     let item = document.createElement('li')
     item.textContent = e.label+': '
     item.appendChild(styledScore(e.score))
@@ -78,6 +81,16 @@ const createResult = () =>{
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  body = document.getElementsByTagName("BODY")[0] 
-  body.appendChild(createElements())
+  body = document.getElementsByTagName("BODY")[0]
+  container = document.createElement('div')
+  container.className = 'tp-result-container'
+  body.appendChild(container)
+
+  let prevData = JSON.parse(localStorage.getItem('data'))
+  if(prevData){
+    createResult(prevData.notes)
+    showResults()
+  }else{
+    createElements()
+  }
 });
