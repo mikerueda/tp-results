@@ -14,11 +14,6 @@ async function getData(dni){
   }
 }
 
-const showResults = () => {
-  container.style.height = `${scoreWrapper.clientHeight}px`
-  inputBox ? inputBox.classList.add('hidden') : null
-}
-
 const getScore = (data) => {
   let weights = 0;
   let prom = 0;
@@ -26,7 +21,7 @@ const getScore = (data) => {
   return Math.round((prom / weights)*10) / 10
 }
 
-const createElements = () => {
+const createSearchBox = () => {
   let input = document.createElement('input')
   input.id = 'searchBox'
   input.onkeypress = findResults
@@ -48,12 +43,10 @@ const findResults = () => {
     getData(dni)
   }
 }
-      
-const styledScore = e => {
-  let span = document.createElement('span')
-  span.textContent = e
-  span.className = e >= 7 ? 'check' : 'alert'
-  return span
+
+const showResults = () => {
+  container.style.height = `${scoreWrapper.clientHeight}px`
+  inputBox ? inputBox.classList.add('hidden') : null
 }
 
 const createResult = (data) =>{
@@ -80,8 +73,15 @@ const createResult = (data) =>{
   })
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  body = document.getElementsByTagName("BODY")[0]
+const styledScore = e => {
+  let span = document.createElement('span')
+  span.textContent = e
+  span.className = e >= 7 ? 'check' : 'alert'
+  return span
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  body = document.getElementsByTagName('BODY')[0]
   container = document.createElement('div')
   container.className = 'tp-result-container'
   body.appendChild(container)
@@ -91,6 +91,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     createResult(prevData.notes)
     showResults()
   }else{
-    createElements()
+    createSearchBox()
   }
 });
