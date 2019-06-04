@@ -1,6 +1,6 @@
 var body, data, inputBox, container, scoreWrapper
 async function getData(dni){
-  let request = await fetch('https://raw.githubusercontent.com/Marcreativo/tp-results/master/db.json')
+  let request = await fetch('https://raw.githubusercontent.com/Marcreativo/tp-results/gh-pages/db.json')
   response = await request.json()
   let data = response.results.filter(e => e.students.includes(dni))[0]
   if (data){
