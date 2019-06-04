@@ -3,13 +3,13 @@
     {
       "students": ["isabel",34982595,"sofia",38153482,"mercedes",32760885],
       "notes": [
-        {"label":"Maquetado", "score":0, "weight":5},
-        {"label":"Sass", "score":8, "weight":5},
-        {"label":"Asignación de funciones", "score":7, "weight":15},
+        {"label":"Maquetado", "score":8, "weight":5},
+        {"label":"Sass", "score":9, "weight":5},
+        {"label":"Asignación de funciones", "score":6, "weight":15},
         {"label":"Manejo de datos", "score":7, "weight":10},
-        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Estructuras JavaScript", "score":6, "weight":15},
         {"label":"Consigna", "score":8, "weight":10},
-        {"label":"Apreciativa", "score":9, "weight":10}
+        {"label":"Apreciativa", "score":7, "weight":10}
       ]
     },
     {
