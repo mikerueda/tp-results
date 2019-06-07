@@ -27,13 +27,13 @@
     {
       "students": ["agustina",38667960,"cristina",28731971,"shirley",95679506],
       "notes": [
-        {"label":"Maquetado", "score":0, "weight":5},
-        {"label":"Sass", "score":0, "weight":5},
-        {"label":"Asignación de funciones", "score":0, "weight":15},
-        {"label":"Manejo de datos", "score":0, "weight":10},
-        {"label":"Estructuras JavaScript", "score":0, "weight":15},
-        {"label":"Consigna", "score":0, "weight":10},
-        {"label":"Apreciativa", "score":0, "weight":10}
+        {"label":"Maquetado", "score":8, "weight":5},
+        {"label":"Sass", "score":8, "weight":5},
+        {"label":"Asignación de funciones", "score":6, "weight":15},
+        {"label":"Manejo de datos", "score":7, "weight":10},
+        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Consigna", "score":9, "weight":10},
+        {"label":"Apreciativa", "score":9, "weight":10}
       ]
     },
     {
