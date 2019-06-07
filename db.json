@@ -78,7 +78,7 @@
         {"label":"Maquetado", "score":7, "weight":5},
         {"label":"Sass", "score":7, "weight":5},
         {"label":"Asignación de funciones", "score":9, "weight":15},
-        {"label":"Manejo de datos", "score":9, "weight":10},
+        {"label":"Manejo de datos", "score":7, "weight":10},
         {"label":"Estructuras JavaScript", "score":8, "weight":15},
         {"label":"Consigna", "score":8, "weight":10},
         {"label":"Apreciativa", "score":8, "weight":10}
