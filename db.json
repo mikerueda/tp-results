@@ -87,13 +87,13 @@
     {
       "students": ["daiana",36630640,"carmen",30789426,"karin",95674226],
       "notes": [
-        {"label":"Maquetado", "score":0, "weight":5},
-        {"label":"Sass", "score":0, "weight":5},
-        {"label":"Asignación de funciones", "score":0, "weight":15},
-        {"label":"Manejo de datos", "score":0, "weight":10},
-        {"label":"Estructuras JavaScript", "score":0, "weight":15},
-        {"label":"Consigna", "score":0, "weight":10},
-        {"label":"Apreciativa", "score":0, "weight":10}
+        {"label":"Maquetado", "score":7, "weight":5},
+        {"label":"Sass", "score":8, "weight":5},
+        {"label":"Asignación de funciones", "score":8, "weight":15},
+        {"label":"Manejo de datos", "score":8, "weight":10},
+        {"label":"Estructuras JavaScript", "score":6, "weight":15},
+        {"label":"Consigna", "score":8, "weight":10},
+        {"label":"Apreciativa", "score":8, "weight":10}
       ]
     },
     {
