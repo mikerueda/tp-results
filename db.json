@@ -47,6 +47,54 @@
         {"label":"Consigna", "score":9, "weight":10},
         {"label":"Apreciativa", "score":9, "weight":10}
       ]
+    },
+    {
+      "students": ["cecilia",29115396,"cristina",28731971,"marina",38833314],
+      "notes": [
+        {"label":"Maquetado", "score":8, "weight":5},
+        {"label":"Sass", "score":8, "weight":5},
+        {"label":"Asignación de funciones", "score":8, "weight":15},
+        {"label":"Manejo de datos", "score":7, "weight":10},
+        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Consigna", "score":9, "weight":10},
+        {"label":"Apreciativa", "score":9, "weight":10}
+      ]
+    },
+    {
+      "students": ["juliana",37555424,"carmen",30789426,"shirley",95679506],
+      "notes": [
+        {"label":"Maquetado", "score":5, "weight":5},
+        {"label":"Sass", "score":6, "weight":5},
+        {"label":"Asignación de funciones", "score":8, "weight":15},
+        {"label":"Manejo de datos", "score":7, "weight":10},
+        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Consigna", "score":9, "weight":10},
+        {"label":"Apreciativa", "score":7, "weight":10}
+      ]
+    },
+    {
+      "students": ["karin",95674226,",mariana",94699292,"noelia",33207419,"sofia",38153482],
+      "notes": [
+        {"label":"Maquetado", "score":6, "weight":5},
+        {"label":"Sass", "score":7, "weight":5},
+        {"label":"Asignación de funciones", "score":7, "weight":15},
+        {"label":"Manejo de datos", "score":7, "weight":10},
+        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Consigna", "score":5, "weight":10},
+        {"label":"Apreciativa", "score":5, "weight":10}
+      ]
+    },
+    {
+      "students": ["malena",35157029,",annete",39773620,"mercedes",32760885],
+      "notes": [
+        {"label":"Maquetado", "score":8, "weight":5},
+        {"label":"Sass", "score":8, "weight":5},
+        {"label":"Asignación de funciones", "score":8, "weight":15},
+        {"label":"Manejo de datos", "score":8, "weight":10},
+        {"label":"Estructuras JavaScript", "score":8, "weight":15},
+        {"label":"Consigna", "score":9, "weight":10},
+        {"label":"Apreciativa", "score":9, "weight":10}
+      ]
     }
   ],
   "profile": {
