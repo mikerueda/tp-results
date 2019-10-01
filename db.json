@@ -47,6 +47,66 @@
         {"label":"Consigna", "score":7, "weight":10},
         {"label":"Apreciativa", "score":8, "weight":10}
       ]
+    },
+    {
+      "students": ["agustina",38667960,"pilar f",40288812],
+      "notes": [
+        {"label":"Maquetado", "score":8, "weight":5},
+        {"label":"Sass", "score":7, "weight":5},
+        {"label":"Asignación de funciones", "score":9, "weight":15},
+        {"label":"Manejo de datos", "score":8, "weight":10},
+        {"label":"Estructuras JavaScript", "score":8, "weight":15},
+        {"label":"Consigna", "score":8, "weight":10},
+        {"label":"Apreciativa", "score":8, "weight":10}
+      ]
+    },
+    {
+      "students": ["carmen",30789426,"gabriela",36950760],
+      "notes": [
+        {"label":"Maquetado", "score":7, "weight":5},
+        {"label":"Sass", "score":7, "weight":5},
+        {"label":"Asignación de funciones", "score":7, "weight":15},
+        {"label":"Manejo de datos", "score":6, "weight":10},
+        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Consigna", "score":8, "weight":10},
+        {"label":"Apreciativa", "score":7, "weight":10}
+      ]
+    },
+    {
+      "students": ["constanza",41371563,"shriley",95679506],
+      "notes": [
+        {"label":"Maquetado", "score":8, "weight":5},
+        {"label":"Sass", "score":9, "weight":5},
+        {"label":"Asignación de funciones", "score":7, "weight":15},
+        {"label":"Manejo de datos", "score":7, "weight":10},
+        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Consigna", "score":8, "weight":10},
+        {"label":"Apreciativa", "score":9, "weight":10}
+      ]
+    },
+    {
+      "students": ["pilar m",41924645,"mercedes",32760885],
+      "notes": [
+        {"label":"Maquetado", "score":7, "weight":5},
+        {"label":"Sass", "score":8, "weight":5},
+        {"label":"Asignación de funciones", "score":7, "weight":15},
+        {"label":"Manejo de datos", "score":7, "weight":10},
+        {"label":"Estructuras JavaScript", "score":7, "weight":15},
+        {"label":"Consigna", "score":8, "weight":10},
+        {"label":"Apreciativa", "score":8, "weight":10}
+      ]
+    },
+    {
+      "students": ["karin",95674226,"fernanda",32997641],
+      "notes": [
+        {"label":"Maquetado", "score":8, "weight":5},
+        {"label":"Sass", "score":8, "weight":5},
+        {"label":"Asignación de funciones", "score":8, "weight":15},
+        {"label":"Manejo de datos", "score":8, "weight":10},
+        {"label":"Estructuras JavaScript", "score":8, "weight":15},
+        {"label":"Consigna", "score":7, "weight":10},
+        {"label":"Apreciativa", "score":8, "weight":10}
+      ]
     }
   ],
   "profile": {
